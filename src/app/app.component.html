@@ -8,5 +8,8 @@
 </div>
 <div class="people">
   <!-- Add your people component here -->
-   <app-people></app-people>
+   <app-people
+    *ngFor="let p of people"
+    [name]="p"
+   ></app-people>
 </div>
