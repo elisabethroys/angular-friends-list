@@ -10,6 +10,7 @@ export class AppComponent {
   favorite: string | null = null;
 
   people: string[] = ['lewis', 'jules', 'ed', 'nathan', 'dave', 'nigel'];
+  favs: string[] = [];
 
   addFriend() {
     if (!this.newFriend) {
@@ -17,5 +18,19 @@ export class AppComponent {
     }
     this.people.push(this.newFriend);
     this.newFriend = null;
+  }
+
+  addFav(friend: string): void {
+    console.log(friend);
+    if (this.favs.indexOf(friend) === -1) {
+      this.favs.push(friend);
+    }
+  }
+
+  isinFav(friend: string) {
+    if (this.favs.indexOf(friend) === -1) {
+      return false;
+    }
+    return true;
   }
 }
