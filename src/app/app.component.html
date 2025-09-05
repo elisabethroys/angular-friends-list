@@ -5,10 +5,9 @@
 </div>
 <div class="favorite">
   <p>My favorite person is:</p>
-  <p *ngFor="let f of favs">{{ f }},</p>
+  <p *ngFor="let f of favs">&nbsp;{{ f }},</p>
 </div>
 <div class="people">
-  <!-- Add your people component here -->
    <app-people
     *ngFor="let f of people"
     [name]="f"
